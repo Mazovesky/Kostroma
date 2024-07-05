@@ -1,0 +1,78 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@raw/background1"
+        android:scaleType="fitXY" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" /> <!-- Полупрозрачный слой -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textViewRiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Какой высоты каланча?"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:background="@android:color/white"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/buttonOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 метров"
+            android:layout_below="@id/textViewRiddle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/buttonOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35 метров"
+            android:layout_below="@id/buttonOption1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/buttonOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="36 метров"
+            android:layout_below="@id/buttonOption2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/buttonOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="37 метров"
+            android:layout_below="@id/buttonOption3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="236dp"
+        android:contentDescription="@string/image_description"
+        android:src="@raw/photo1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="378dp"
+        android:text="Пожарная каланча была построена в 1827 году после большого пожара. Высота башни
+составляет 35 метров. В советское время пожарная каланча использовалась как
+наблюдательный пункт гражданской обороны. Во время Великой Отечественной
+войны на каланче дежурили дозорные, которые следили за воздушным пространством
+и предупреждали жителей города о налетах вражеской авиации. В настоящее время
+пожарная каланча является музеем, в котором можно увидеть исторические пожарные
+инструменты, узнать о истории пожарной охраны в Костроме и подняться на верхний
+уровень башни, откуда открывается прекрасный вид на город."
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/buttonHint1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Получить подсказку"
+
+        />
+
+
+</LinearLayout>

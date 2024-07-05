@@ -1,0 +1,16 @@
+[
+  {
+    "latitude": 57.777787,
+    "longitude": 40.942560,
+    "title": "Точка 1",
+    "description": "Описание точки 1",
+    "imageResource": "my_location_icon"
+  },
+  {
+    "latitude": 57.777131,
+    "longitude": 40.943992,
+    "title": "Точка 2",
+    "description": "Описание точки 2",
+    "imageResource": "my_location_icon"
+  }
+]
