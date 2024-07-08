@@ -111,8 +111,23 @@ public class Map extends AppCompatActivity {
     }
 
     private void initializePoints() {
-        pointsOfInterest.add(new PointOfInterest(new Point(57.777787, 40.942560), "Пожарная каланча ", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
-        pointsOfInterest.add(new PointOfInterest(new Point(57.777662,40.942656), "Точка 2", "Описание точки 2", R.drawable.my_location_icon, Activity2.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.768686, 40.925823), "Пожарная каланча ", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.769329, 40.924729), "Полицейское управление", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity2.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.768801, 40.925978), "Памятник пожарным", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.769560, 40.926247), "Музей театрального костюма ", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.770198, 40.926041), "Дом В.Ф. Стожарова", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.768840, 40.926795), "Военно-исторический отдел Костромского музея-заповедника", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.771657, 40.929997), "Казённый винный склад, конец XIX-начало ХХ века", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.769598, 40.929805), "Романовский музей", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.769934, 40.930496), "Костромской государственный историко-архитектурный и художественный музей-заповедник", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.770402, 40.931305), "Театр имени А.Н. Островского", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.768225, 40.928556), "Особняк сенатора Борщова", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.768688, 40.934770), "Марьинский сквер", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.766905, 40.931601), "Дом городского головы Г.Н. Ботникова", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.766617, 40.933398), "Церковь Благовещения Пресвятой Богородицы", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.767365, 40.927778), "Статуя Снегурочки", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.766548, 40.929350), "Юрий Долгорукий", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
+        pointsOfInterest.add(new PointOfInterest(new Point(57.766168, 40.929750), "Ювелир-кустарь", "Посмотреть информацию об этом месте?", R.drawable.my_location_icon, Activity1.class));
     }
 
     private void addPointsToMap() {
@@ -124,7 +139,7 @@ public class Map extends AppCompatActivity {
             ).addTapListener(new MapObjectTapListener() {
                 @Override
                 public boolean onMapObjectTap(@NonNull MapObject mapObject, @NonNull Point point) {
-                    if (playerLocation != null && isWithinDistance(point, playerLocation, 30)) {
+                    if (playerLocation != null && isWithinDistance(point, playerLocation, 3000)) {
                         showPointDetail(poi);
                     } else {
                         Toast.makeText(Map.this, "Вы слишком далеко от этой точки", Toast.LENGTH_SHORT).show();
@@ -137,7 +152,7 @@ public class Map extends AppCompatActivity {
 
     private void updatePlayerPlacemark(Point point) {
         if (playerPlacemark == null) {
-            playerPlacemark = mapView.getMap().getMapObjects().addPlacemark(point, ImageProvider.fromResource(this, R.drawable.my_location_icon));
+            playerPlacemark = mapView.getMap().getMapObjects().addPlacemark(point, ImageProvider.fromResource(this, R.drawable.my_location_icon2));
         } else {
             playerPlacemark.setGeometry(point);
         }

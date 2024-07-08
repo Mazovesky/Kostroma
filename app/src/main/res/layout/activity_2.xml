@@ -14,6 +14,6 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/my_location_icon"
+        android:src="@drawable/my_location_icon2"
         android:contentDescription="@string/image_description" />
 </LinearLayout>
